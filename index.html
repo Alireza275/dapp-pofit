@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNBProfit</title>
+    <meta property="og:title" content="BNBProfit - Smart Defi Investment Dapp with 5 Level Referral Program">
+    <meta property="og:site_name" content="BNBProfit">
+    <meta property="og:url" content="index.html">
+    <meta property="og:description" content="BNBProfit is a Smart-Contract Based Investment Program built on Binance Smart Chain which enables users to invest and get rewarded daily. ">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <link rel="stylesheet" type="text/css" href="styles/reset.css">
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.html" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/media.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body class="body">
+<section class="first-screen">
+    <!-- header -->
+
+    <header class="header">
+        <div class="container-info">
+            <div class="container-header">
+                <a href="#" class="container-logo">
+                    <div class="logo">
+                        <img src="images/7logo.png"  width=200 heighth=212 alt="logo"/>
+                    </div>
+                </a>
+                <div class="header-contacts">
+                    <div class="container-btn-contacts">
+                        <button type="button" class="btn-contact connect" id="connectBtn">
+                            <span id="buttonConnectContent">Connect</span>
+                        </button>
+
+                    </div>
+
+                    <ul class="contact-list">
+                      <li class="item-list telegram">
+                        <a href="https://t.me/network_coin " target="_blank" class="item-link"></a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-first-screen">
+        <div class="container-info">
+            <div class="container-info-screen">
+                <div class="screen-block">
+                    <div class="text-container">
+                        <h1 class="main-title">
+                        Most Secure
+                            Yield Profiting Dapp on 
+                            <span>Binance Smart Chain</span>
+                        </h1>
+                        <p class="sub-title-main">
+                             <span>7% Daily ROI</span> for 20 Days
+                            <br><span>5 Levels</span> of Referral Rewards
+                        </p>
+                        <button type="button" class="pink-btn mobile-block" id="depositRouterButton">
+                           Invest
+                        </button>
+                    </div>
+                </div>
+                <div class="screen-block right-screen">
+                    <div class="container-result">
+                        <div class="block-result">
+                            <p class="result" id="totalCurrencyInvested">0</p>
+                            <div class="sub-text-result">
+                                <span>Total</span>
+                                <span class="pink-text">BNB</span>
+                                <span class="bold-text">Invested</span>
+                            </div>
+                        </div>
+                        <div class="block-result">
+                            <p class="result" id="totalReferralReward">0</p>
+                            <div class="sub-text-result">
+                                 <span>Total Referral</span>
+                                 <span class="pink-text">BNB</span>
+                                <span class="bold-text">Reward</span>
+                            </div>
+                        </div>
+                        <div class="block-result check-tron">
+                            <a href="https://testnet.bscscan.com/address/0xb50489bd7b4898b9b1317088c0abc8939d0bdf46#code" target="_blank">
+                                <div class="img-icon">
+                                    <img src="images/index.png" alt="">
+                                </div>
+                            </a>
+                            <div class="sub-text-result">
+                                <a href="https://bscscan.com/address/0x8eD9B79ae34642ba1a723E83670Cc12dD5D4A470" target="_blank">  <span class="bold-text">Check </span><span class="pink-text">Smart Contract</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- first section -->
+
+<section class="section-info">
+    <div class="calculate-block-container">
+        <div class="container-info">
+            <div class="header-section">
+                <h2 class="title-header" id="investmentSectionTitle">
+                    Calculate Profit
+                </h2>
+            </div>
+
+            <div class="container-calculate-info">
+                <div class="container-counter-amount">
+                        <div class="deposit-block">
+                            <h3 class="title-deposit amount-title">
+                                Deposit Amount:
+                            </h3>
+                            <div class="amount-field">
+                                <input type="number" id="depositAmount" class="amount-input form-control" step="0.0001" value="1" min="0.05" />
+                                <button class="amount-field-button" id="maxAmountButton">Max</button>
+                            </div>
+                        </div>
+                    </div>
+                <div class="footer-counter">
+                    <div class="container-footer-info">
+                        <ul class="list-info">
+                            <li class="item-info">
+                                <h4 class="title-info">
+                                    Daily ROI:
+                                </h4>
+                                <p id="dailyRoi">
+                                    7%
+                                </p>
+                            </li>
+                            <li class="item-info">
+                                <h4 class="title-info">
+                                    Total Profit:
+                                </h4>
+                                <p id="totalProfitPercent">
+                                    140%
+                                </p>
+                            </li>
+                            <li class="item-info">
+                                <h4 class="title-info">
+                                    In <span id="days">0</span> days
+                                    you will earn:
+                                </h4>
+                                <p class="pink-text">
+                                    <span id="profitCurrencyValue">1.4</span> <span>BNB</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="pink-btn invest-btn" id="investButton">Invest</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="links-row">
+       <div class="links-row__wrap">
+            <a class="link-icon" href="#get_started_section">
+                <span class="link-icon__img"><img src="images/info.svg" alt="Info"></span><span class="h6">Info</span>
+            </a>
+            <a href="https://testnet.bscscan.com/address/0xb50489bd7b4898b9b1317088c0abc8939d0bdf46#code" target="_blank" class="link-icon">
+                <span class="link-icon__img"><img src="images/contract.svg" alt="Contract"></span><span class="h6">Contract</span>
+            </a>
+			<a href="https://t.me/network_coin" target="_blank" class="link-icon">
+                <span class="link-icon__img"><img src="images/telegram.svg" alt="Telegram"></span><span class="h6">Telegram</span>
+            </a>
+            
+        </div>
+	</div>
+      
+<!-- second section -->
+
+<!-- second section -->
+
+<section class="dashboard-section">
+    <div class="dashboard-block-container">
+        <div class="container-info">
+            <div class="header-section">
+                <h2 class="title-header">
+                    Dashboard
+                </h2>
+            </div>
+
+            <div class="container-dashboard-info">
+                <div class="container-info-block">
+                    <ul class="list-dashboard">
+                        <li class="item-dashboard">
+                            <div>
+                                <h5 class="title-block-item">
+                                    Withdrawable (Divs+Refs)
+                                </h5>
+                                <p class="info-item">
+                                    <span id="toWithdraw">0</span>
+                                    <span class="pink-text">BNB</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item-dashboard">
+                            <div>
+                                <h5 class="title-block-item">
+                                    Total Invested
+                                </h5>
+                                <p class="info-item">
+                                    <span id="investedByUser">0</span>
+                                    <span class="pink-text">BNB</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item-dashboard">
+                            <div>
+                                <h5 class="title-block-item">
+                                    Total Withdrawal
+                                </h5>
+                                <p class="info-item">
+                                    <span id="withdrawalByUser">0</span>
+                                    <span class="pink-text">BNB</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item-dashboard">
+                            <div>
+                                <h5 class="title-block-item">
+                                    Total Referral Reward
+                                </h5>
+                                <p class="info-item">
+                                    <span id="refRewardForUser">0</span>
+                                    <span class="pink-text">BNB</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <button type="button" class="pink-btn withdraw-btn" id="withdrawButton">Withdraw</button>
+                    <div class="container-footer-dashboard">
+                        <h3 class="title-footer-dashboard">
+                            Your Referral Link:
+                            <span id="refLink">You will get your ref link after investing</span>
+                            <button class="btn-copy" id="copyButton"></button>
+                            <span class="title-copy" id="copiedSuccessfully" style="display: none;">Copied successfully !</span>
+                        </h3>
+                        <ul class="list-footer">
+                           
+                            <li class="item-footer">
+                                <h3 class="title-level fifth-level">
+                                    5%
+                                </h3>
+                                <p class="info-level">
+                                    <span id="referralsCountAtLevel5">0</span> referrals
+                                </p>
+                                <p class="info-level">
+                                    5% Referral Rewards
+                                </p>
+                            </li>
+                            <li class="item-footer">
+                                <h3 class="title-level fifth-level">
+                                    3%
+                                </h3>
+                                <p class="info-level">
+                                    <span id="referralsCountAtLevel2">0</span> referrals
+                                </p>
+                                <p class="info-level">
+                                    3% Referral Rewards
+                                </p>
+                            </li>
+                            <li class="item-footer">
+                                <h3 class="title-level fifth-level">
+                                    2%
+                                </h3>
+                                <p class="info-level">
+                                    <span id="referralsCountAtLevel3">0</span> referrals
+                                </p>
+                                <p class="info-level">
+                                    2% Referral Rewards
+                                </p>
+                            </li>
+                            <li class="item-footer">
+                                <h3 class="title-level fifth-level">
+                                    1%
+                                </h3>
+                                <p class="info-level">
+                                    <span id="referralsCountAtLevel4">0</span> referrals
+                                </p>
+                                <p class="info-level">
+                                    1% Referral Rewards
+                                </p>
+                            </li>
+                            <li class="item-footer">
+                                <h3 class="title-level fifth-level">
+                                    0.5%
+                                </h3>
+                                <p class="info-level">
+                                    <span id="referralsCountAtLevel5">0</span> referrals
+                                </p>
+                                <p class="info-level">
+                                    0.5% Referral Rewards
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="dashboard-section security-section">
+    <div class="dashboard-block-container">
+        <div class="container-info">
+            <div class="header-section">
+                <h2 class="title-header">
+                    SECURITY
+                </h2>
+            </div>
+
+            <div class="container-dashboard-info">
+                <div class="card" data-sr-id="12" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 0s, transform 1s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                   <div class="row">
+                      <a href="https://testnet.bscscan.com/address/0xb50489bd7b4898b9b1317088c0abc8939d0bdf46#readContract" target="_blank" class="logo"><img style="width:100%" src="images/bscscan.png" alt="SECURITY"></a><span class="divider"></span>
+                     <h6>Our smart contract is renounced to Zero Address. There is no control of owner and cannot withdraw funds.</h6>
+                       <a href="https://testnet.bscscan.com/address/0xb50489bd7b4898b9b1317088c0abc8939d0bdf46#code" target="_blank" class="button"><span>Verify Owner</span></a>
+                   </div>
+                </div>
+            </div>
+					   
+                   </div>
+               
+    </div>
+</section>
+
+<section id="get_started_section" class="dashboard-section getstarted-section">
+    <div class="dashboard-block-container">
+        <div class="container-info">
+            <div class="header-section">
+                <h2 class="title-header">
+                    Get Started
+                </h2>
+            </div>
+
+            <div class="container-dashboard-info">
+                <div class="card" data-sr-id="13" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 0s, transform 1s cubic-bezier(0.5, 0, 0, 1) 0s;">
+                   <div class="start-item">
+                      <div class="start-item__num">1</div>
+                      <div class="col">
+                         <h5>Create a Wallet</h5>
+                         <h6>Download <a href="https://metamask.io/" target="_blank">MetaMask</a>  <!--<a href="https://trustwallet.com/" target="_blank">TrustWallet</a>--> and create a wallet. Add the Binance Smart Chain to your network-list.<a href="https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain" target="_blank">Guide here</a></h6>
+                      </div>
+                   </div>
+                   <div class="start-item">
+                      <div class="start-item__num">2</div>
+                      <div class="col">
+                         <h5>Get BNB</h5>
+                         <h6>Buy BNB on an exchange (i.e. <a href="https://www.binance.com/en" target="_blank">Binance</a>). Transfer BNB to your wallet address. BEP-20 addresses start with a "0x"</h6>
+                      </div>
+                   </div>
+                   <div class="start-item">
+                      <div class="start-item__num">3</div>
+                      <div class="col">
+                         <h5>Connect your Wallet</h5>
+                         <h6>At the top of the site, click "Connect wallet", confirm the action, after which you should see the numbers of your wallet</h6>
+                      </div>
+                   </div>
+                   <div class="start-item">
+                      <div class="start-item__num">4</div>
+                      <div class="col">
+                         <h5>Make a deposit</h5>
+                         <h6>Click on the "Deposit" button. In the window that opens, enter the amount, click again on the "Deposit" button and confirm the action</h6>
+                      </div>
+                   </div>
+                   <div class="start-item">
+                      <div class="start-item__num">5</div>
+                      <div class="col">
+                         <h5>Get dividends!</h5>
+                         <h6>You have successfully created a deposit! Now every second you will receive dividends that you can withdraw at any time by clicking on the "Withdraw" button</h6>
+                      </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- footer -->
+
+<footer class="footer">
+    <div class="container-info">
+        <div class="container-footer-info">
+            <div class="mobile-flex">
+                <div class="container-logo-footer">
+                <span>
+                    © 2021
+                </span>
+                    <span class="logo-span">BNBProfit</span>
+                </div>
+                <ul class="contact-list mobile-fade">
+                    <li class="item-list telegram">
+                        <a href="https://t.me/network_coin" target="_blank" class="item-link"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container-footer-btn">
+                <button type="button" onclick="location.href='https://testnet.bscscan.com/address/0xb50489bd7b4898b9b1317088c0abc8939d0bdf46#code'" class="pink-btn footer-btn-contact" >Smartcontract</button>
+
+
+
+                <div class="container-list-contact">
+                    <!-- <button target="_blank" onclick="window.location.href='https://hazecrypto.net/audit/BNBProfit'"  class="btn-contact">
+                        <span>Audit</span>
+                    </button> -->
+                    <button type="button" class="btn-contact faq-btn">
+                        <span>Faq</span>
+                    </button>
+                    <ul class="contact-list mobile-block-list">
+                        <li class="item-list telegram">
+                        <a href="https://t.me/network_coin" target="_blank" class="item-link"></a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="image-social">
+                    <div class="br1"></div>
+                    <div class="br2"></div>
+                    <div class="br3"></div>
+                    <div class="br4"></div>
+                </div>
+    </div>
+</footer>
+
+<!-- popup windows -->
+
+ <div class="wrapper-dark">
+<div class="container-faq">
+        <div class="main-container-center">
+            <button type="button" class="close-window"></button>
+            <div class="faq-block">
+                <div class="window-header">
+                    <h2 class="title-window">
+                        FAQ
+                    </h2>
+                </div>
+                <div class="container-list-faq">
+                    <ul class="list-faq">
+                        <li class="item-faq">
+                            <div class="header-item-faq">
+                                <button type="button" class="close-faq-item"></button>
+                                <h3 class="title-faq-item">
+                                    How to participate in BNBProfit? 
+                                </h3>
+                            </div>
+                            <div class="container-info-faq">
+                                <p>
+                                    BNBProfit operates on the Binance Smart Chain. In order to interact with the contract, you need to install the Metamask browser extension. An identical mobile application is also available for iPhone and Android users.
+                                </p>
+                            </div>
+                        </li>
+                        <!-- <li class="item-faq">
+                            <div class="header-item-faq">
+                                <button type="button" class="close-faq-item"></button>
+                                <h3 class="title-faq-item">
+                                    Is the smart contract verified? 
+                                </h3>
+                            </div>
+                            <div class="container-info-faq">
+                                <p>
+                                    Yes, the smart contract is fully verified and audited by HazeCrypto. No vulnerabilities, no backdoors, and no scam scripts have been found in the smart contract. BNBProfit is safe for use in the Binance Smart Chain main network. You can check the audit by clicking the "Audit" button at the top of this page. 
+                                </p>
+                            </div>
+                        </li> -->
+                        <li class="item-faq">
+                            <div class="header-item-faq">
+                                <button type="button" class="close-faq-item"></button>
+                                <h3 class="title-faq-item">
+                                    How to invest in BNBProfit?
+                                </h3>
+                            </div>
+                            <div class="container-info-faq">
+                                <p>
+                                    Select the desired Deposit Period for your investment. Enter the amount of BNB you'd like to deposit. Click ‘Invest’. That's it. 
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item-faq">
+                            <div class="header-item-faq">
+                                <button type="button" class="close-faq-item"></button>
+                                <h3 class="title-faq-item">
+                                    What is the difference between different Deposit Periods?
+                                </h3>
+                            </div>
+                            <div class="container-info-faq">
+                                <p>
+                                    The Deposit Period can vary from 7 to 30 days. Keep in mind that different Deposit Periods have different profitability between 119% and 234%. The longer your Deposit Period - the bigger the reward.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item-faq">
+                            <div class="header-item-faq">
+                                <button type="button" class="close-faq-item"></button>
+                                <h3 class="title-faq-item">
+                                    Can I make multiple deposits? 
+                                </h3>
+                            </div>
+                            <div class="container-info-faq">
+                                <p>
+                                    Absolutely! There is no limit to the number of your deposits.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item-faq">
+                            <div class="header-item-faq">
+                                <button type="button" class="close-faq-item"></button>
+                                <h3 class="title-faq-item">
+                                    Do you have a referral program?
+                                </h3>
+                            </div>
+                            <div class="container-info-faq">
+                                <p>
+                                    Yes, our referral program features 5 levels of referral rewards. For the friends that you invite, you receive a % of their deposits. Check the percentages for each level on our website. 
+                                </p>
+                            </div>
+                        </li>
+                        <li class="item-faq">
+                            <div class="header-item-faq">
+                                <button type="button" class="close-faq-item"></button>
+                                <h3 class="title-faq-item">
+                                    Where can I follow the latest news?
+                                </h3>
+                            </div>
+                            <div class="container-info-faq">
+                                <p>
+                                    Follow our social media channels where we publish all the latest updates.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- warn windows -->
+
+<div class="warn-container" id="warn" >
+    <div class="container-info">
+        <div class="info-warn">
+            <h3 class="title-warn" id="warnTitleContent">
+                NEW RULES ON SITE
+            </h3>
+            <p id="warnMainContent">
+                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam
+            </p>
+        </div>
+        <button type="button" class="btn-contact warn-btn">
+            OK
+        </button>
+    </div>
+</div>
+
+<div class="warn-container error-warn" id="warn1">
+    <div class="container-info">
+        <div class="info-warn">
+            <h3 class="title-warn" id="errorTitleContent">
+                ERROR!
+            </h3>
+            <p id="errorMainContent">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            </p>
+        </div>
+        <button type="button" class="btn-contact warn-btn">
+            OK
+        </button>
+    </div>
+</div>
+
+
+<!-- scripts -->
+
+<script src="lib/jQuery_3.6.0.js"></script>
+<script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/web3modal@latest/dist/index.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@latest/dist/umd/index.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+<script src="lib/rxjs.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="lib/jquery.numeric.js"></script>
+<script src="js/slider_drag.js"></script>
+<script src="abi/contract.abi.js"></script>
+<script src="js/main.js"></script>
+<script src="js/subjects.js"></script>
+<script src="js/observables.js"></script>
+<script src="js/observers.js"></script>
+<script src="js/dapp.js"></script>
+
+</body>
+
+</html>
